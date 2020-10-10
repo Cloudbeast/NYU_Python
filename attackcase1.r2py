@@ -1,0 +1,21 @@
+"""if "testfile.txt.a" in listfiles():
+  removefile("testfile.txt.a")
+if "testfile.txt.b" in listfiles():
+  removefile("testfile.txt.b") """
+
+myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+myfile2=ABopenfile("stestfile.txt",True)  #Create an AB file
+
+# put some valid data in the file.
+myfile.writeat(" Stest12345E",0)
+myfile.writeat("Stest12345E",5)
+myfile.writeat("SorryBiotch!",0)
+myfile.writeat("SorryBiootch!E",12)
+
+
+myfile2.writeat("SoVeryVerySorE",0)
+myfile2.writeat("SoVeryVdddddddddddddddddrrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaerySorE",0)
+myfile2.close()
+
+myfile.close()
+

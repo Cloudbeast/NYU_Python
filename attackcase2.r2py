@@ -1,0 +1,10 @@
+
+myfile=ABopenfile("testfile.txt/0",True)  #Create an AB file
+
+myfile.writeat("Stest12345E" + '\0' + '/0',0)
+#myfile.close()
+myfile.readat(None,0)
+
+
+myfile.close()
+

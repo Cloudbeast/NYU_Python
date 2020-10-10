@@ -1,0 +1,39 @@
+if "testfile.txt.a" in listfiles():
+  removefile("testfile.txt.a")
+if "testfile.txt.b" in listfiles():
+  removefile("testfile.txt.b")
+myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+#myfile.close()
+log("open close once")
+
+#myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+#myfile.close()
+#myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+#myfile.close()
+#myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+#myfile.close()
+
+
+myfile2=ABopenfile("stestfile.txt",True)  #Create an AB file
+log(myfile.readat(2,0))
+# put some valid data in the file.
+myfile.writeat(" Stest12345E",0)
+myfile.writeat("Stest12345E",5)
+myfile.writeat("SorryBitch!",0)
+myfile.writeat("SorryBitch!E",12)
+log("writes 1 completed")
+
+myfile2.writeat("SoVeryVerySorE",0)
+log("writes 2 completed")
+myfile2.close()
+log("2 closed")
+myfile.close()
+log("1 closed")
+myfile=ABopenfile("testfile.txt",True)  #Create an AB file
+log("open 1 again")
+myfile.writeat("SoWokE",2)
+log("wrote to 1 again")
+
+
+myfile.close()
+log("Close 1 again")
